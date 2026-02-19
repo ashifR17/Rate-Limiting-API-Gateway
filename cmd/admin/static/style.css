@@ -1,0 +1,158 @@
+/* Reset & basics */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f0ff, #f7f9fc);
+    padding: 20px;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #1d3557;
+}
+
+header p {
+    color: #457b9d;
+    font-size: 1rem;
+}
+
+/* Panels */
+.panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+}
+
+.panel h2 {
+    color: #1d3557;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #a8dadc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Inputs */
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #1d3557;
+    box-shadow: 0 0 5px rgba(29, 53, 87, 0.3);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #1d3557;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #457b9d;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Horizontal layout for limit panels */
+.limits-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Wraps on smaller screens */
+}
+
+.limits-panel {
+    flex: 1 1 calc(33% - 20px);
+    min-width: 220px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .limits-panel {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .limits-section {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.endpoint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.endpoint-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f5f8;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.endpoint-item label {
+    font-weight: 500;
+    cursor: pointer;
+}

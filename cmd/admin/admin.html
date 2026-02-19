@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Rate Limit Panel</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Admin Rate Limit Panel</h1>
+            <p>Manage global, user, and user-API rate limits & API endpoints easily.</p>
+        </header>
+
+        <!-- Admin Token Section -->
+        <section class="panel token-panel">
+            <h2>Admin Authentication</h2>
+            <div class="input-row">
+                <input type="text" id="adminKey" placeholder="Enter Admin Token" />
+                <button id="loadBtn">Load Config</button>
+                <button id="updateBtn">Update Config</button>
+            </div>
+        </section>
+
+        <!-- Limit Panels -->
+        <div class="limits-section">
+            <!-- Global Limits -->
+            <section class="panel limits-panel">
+                <h2>Global Limits</h2>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="globalCapacity">Capacity</label>
+                        <input type="number" id="globalCapacity" placeholder="1000" />
+                    </div>
+                    <div class="input-group">
+                        <label for="globalRate">Rate</label>
+                        <input type="number" id="globalRate" placeholder="100" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Limits -->
+            <section class="panel limits-panel">
+                <h2>User Limits</h2>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="userCapacity">Capacity</label>
+                        <input type="number" id="userCapacity" placeholder="500" />
+                    </div>
+                    <div class="input-group">
+                        <label for="userRate">Rate</label>
+                        <input type="number" id="userRate" placeholder="50" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- User-API Limits -->
+            <section class="panel limits-panel">
+                <h2>User-API Limits</h2>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="userApiCapacity">Capacity</label>
+                        <input type="number" id="userApiCapacity" placeholder="200" />
+                    </div>
+                    <div class="input-group">
+                        <label for="userApiRate">Rate</label>
+                        <input type="number" id="userApiRate" placeholder="20" />
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- API Endpoint Control Panel -->
+        <section class="panel limits-panel">
+            <h2>API Endpoint Control</h2>
+            <div id="endpointList" class="endpoint-list">
+                <!-- Dynamic checkboxes will be added here -->
+            </div>
+            <button id="saveEndpointsBtn">Save Endpoint Config</button>
+        </section>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
