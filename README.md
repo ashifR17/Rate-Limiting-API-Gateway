@@ -77,6 +77,4 @@ docker exec -it redis-gateway redis-cli HGETALL rate:user:user1:api:/api/*proxyP
 ```
 
 ## Future Enhancements
-1. Add authentication & authorization
-2. Build a UI/Admin API to dynamically update rate limit config
-3. Add metrics dashboard for monitoring token usage
+1. Add metrics dashboard for monitoring token usage
